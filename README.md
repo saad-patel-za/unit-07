@@ -34,3 +34,9 @@ GSAP ScrollTrigger controls the eight-beat fight, reveals, and background parall
 ## Validation
 
 Production build and TypeScript check pass. Browser checks cover menu, dossier overlay, reader zoom and next page, Escape close, mobile overflow, asset loading, and manual fight selection. Local endpoint checks cover success, duplicate submission, invalid email, and missing consent; duplicate test submissions produce one database row.
+
+## GitHub Pages preview
+
+`npm run build:pages` builds the same comic UI into `dist-pages/`, with assets scoped to `/unit-07/`. GitHub Actions builds and publishes it after pushes to `main`. In repository Settings → Pages, the publishing source must be GitHub Actions.
+
+GitHub Pages is static hosting. The preview shows a launch notice instead of collecting emails; the existing server-backed Sites version keeps its D1 waitlist. The static entry point is `pages-preview/main.tsx` and the separate build configuration is `vite.pages.config.ts`.
