@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '24'
           cache: npm
-      - run: npm ci --include=dev --include=optional
+      - run: npm install --include=dev --include=optional
       - run: npm run build:pages
       - uses: actions/upload-pages-artifact@v4
         with:
